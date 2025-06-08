@@ -12,6 +12,14 @@
 
   programs.xwayland.enable = true;
 
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = [
+      pkgs.kdePackages.xdg-desktop-portal-kde
+    ];
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "de";

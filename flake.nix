@@ -32,14 +32,19 @@
 
           modules = [
 
-            {
-              nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
-            }
-
+            # System
             ./machines/L340/configuration.nix
+            ./machines/L340/modules/audio.nix
+            ./machines/L340/modules/environment.nix
+            ./machines/L340/modules/graphics.nix
+            ./machines/L340/modules/hardware-configuration.nix
+            ./machines/L340/modules/nix.nix
+            ./machines/L340/modules/packages.nix
             home-manager.nixosModules.home-manager
 
+            # User
             {
+              nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "BACKUP";

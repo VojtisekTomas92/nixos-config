@@ -5,11 +5,7 @@
 }:
 {
   imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./modules/packages.nix
-    ./modules/nix.nix
-    ./modules/graphics.nix
+
   ];
 
   # Bootloader.
@@ -50,16 +46,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
   users.users.tomas = {
     isNormalUser = true;
     description = "tomas";
@@ -69,30 +55,6 @@
       "wheel"
     ];
   };
-
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = [
-      pkgs.kdePackages.xdg-desktop-portal-kde
-    ];
-  };
-
-  environment.variables = {
-    KWIN_FORCE_SW_CURSOR = 1;
-  };
-
-  # Apparantly i need this "Enable zsh completion.
-  # Don't forget to add environment.pathsToLink = [ "/share/zsh" ]; to your system configuration to get completion for system packages (e.g. systemd."
-  environment.pathsToLink = [ "/share/zsh" ];
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
 
   system.stateVersion = "24.05"; # Did you read the comment?
 }
