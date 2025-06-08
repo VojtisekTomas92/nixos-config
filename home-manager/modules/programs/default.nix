@@ -8,5 +8,6 @@
     ./starship
     ./vscode
     ./zsh
+    ./nh
   ];
 }

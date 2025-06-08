@@ -46,10 +46,6 @@
     userEmail = "vojtisektomas92@gmail.com";
   };
 
-  programs.nh = {
-    enable = true;
-  };
-
   services.syncthing = {
     enable = true;
     tray = {
