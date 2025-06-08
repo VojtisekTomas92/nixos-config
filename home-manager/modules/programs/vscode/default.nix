@@ -21,6 +21,7 @@
             colorTheme = "One Dark Pro";
           };
           editor = {
+            fontFamily = "FiraCode Nerd Font Mono";
             formatOnSave = true;
           };
           nix = {
