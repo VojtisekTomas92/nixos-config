@@ -10,7 +10,7 @@
 
     shellAliases = {
       lla = "ls -la";
-      nhs = "nh os switch /home/$USER/nixos-config/nixos#$HOSTNAME";
+      nhs = "nh os switch";
     };
 
     initContent = lib.mkOrder 1000 ''
