@@ -28,15 +28,6 @@
     '';
   };
 
-  programs.kitty = {
-    enable = true;
-    shellIntegration.enableZshIntegration = true;
-    themeFile = "OneDark-Pro";
-    font = {
-      name = "Fira Code";
-    };
-  };
-
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 
