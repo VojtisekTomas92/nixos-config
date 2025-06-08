@@ -22,6 +22,7 @@
           };
           editor = {
             fontFamily = "FiraCode Nerd Font Mono";
+            minimap.autohide = true;
             formatOnSave = true;
           };
           nix = {
