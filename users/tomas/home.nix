@@ -8,26 +8,6 @@
     ../../home-manager/modules/packages.nix
   ];
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    package = null;
-    portalPackage = null;
-    extraConfig = ''
-      source = ~/dotfiles/hyprland/hyprland.conf
-    '';
-  };
-
-  #neovim
-
-  programs.neovim = {
-    enable = true;
-    extraLuaConfig = ''
-      package.path = "/home/tomas/dotfiles/neovim/lua/?.lua;" ..
-        package.path
-      require("init")
-    '';
-  };
-
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 

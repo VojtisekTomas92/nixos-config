@@ -9,5 +9,7 @@
     ./vscode
     ./zsh
     ./nh
+    ./kitty
+    ./neovim
   ];
 }
