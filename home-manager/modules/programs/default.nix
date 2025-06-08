@@ -13,5 +13,6 @@
     ./neovim
     ./bat
     ./stylix
+    ./firefox
   ];
 }
