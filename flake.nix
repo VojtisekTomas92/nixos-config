@@ -14,10 +14,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
   };
 
@@ -29,7 +25,6 @@
       nix-flatpak,
       plasma-manager,
       nix-vscode-extensions,
-      stylix,
       ...
     }@inputs:
     {
@@ -51,7 +46,6 @@
             ./machines/L340/modules/nix.nix
             ./machines/L340/modules/packages.nix
             home-manager.nixosModules.home-manager
-            stylix.nixosModules.stylix
 
             # User
             {

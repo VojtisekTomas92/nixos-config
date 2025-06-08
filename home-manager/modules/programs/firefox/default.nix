@@ -17,6 +17,7 @@
           (extension "ublock-origin" "uBlock0@raymondhill.net")
           (extension "sponsorblock" "sponsorBlocker@ajay.app")
           (extension "dearrow" "deArrow@ajay.app")
+          (extension "material-icons-for-github" "{eac6e624-97fa-4f28-9d24-c06c9b8aa713}")
         ];
     };
   };
