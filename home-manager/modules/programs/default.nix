@@ -11,5 +11,6 @@
     ./nh
     ./kitty
     ./neovim
+    ./bat
   ];
 }
