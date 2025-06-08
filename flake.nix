@@ -3,13 +3,22 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    plasma-manager.url = "github:nix-community/plasma-manager";
-    plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager.inputs.home-manager.follows = "home-manager";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -20,6 +29,7 @@
       nix-flatpak,
       plasma-manager,
       nix-vscode-extensions,
+      stylix,
       ...
     }@inputs:
     {
@@ -41,6 +51,7 @@
             ./machines/L340/modules/nix.nix
             ./machines/L340/modules/packages.nix
             home-manager.nixosModules.home-manager
+            stylix.nixosModules.stylix
 
             # User
             {

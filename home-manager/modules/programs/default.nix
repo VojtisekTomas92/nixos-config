@@ -12,5 +12,6 @@
     ./kitty
     ./neovim
     ./bat
+    ./stylix
   ];
 }
