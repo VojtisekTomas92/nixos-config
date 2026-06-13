@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [
+    ./modules/vscode.nix
+  ];
+
   home.username = "tomas";
   home.homeDirectory = "/home/tomas";
 
