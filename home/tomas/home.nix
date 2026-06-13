@@ -3,7 +3,11 @@
 {
 
   imports = [
+    ./packages.nix
     ./modules/vscode.nix
+    ./modules/syncthing.nix
+    ./modules/obsidian.nix
+
   ];
 
   home.username = "tomas";
