@@ -13,6 +13,8 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixcord.url = "github:FlameFlag/nixcord";
   };
 
   outputs =
@@ -21,6 +23,7 @@
       nixpkgs,
       home-manager,
       nix-vscode-extensions,
+      nixcord,
       ...
     }@inputs:
     {
@@ -42,6 +45,7 @@
           extraSpecialArgs = { inherit nix-vscode-extensions; };
           modules = [
             ./home/tomas/home.nix
+            nixcord.homeModules.nixcord
           ];
         };
       };

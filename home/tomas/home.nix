@@ -7,6 +7,7 @@
     ./modules/vscode.nix
     ./modules/syncthing.nix
     ./modules/obsidian.nix
+    ./modules/nixcord.nix
 
   ];
 
