@@ -15,6 +15,13 @@
     };
 
     nixcord.url = "github:FlameFlag/nixcord";
+
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
   };
 
   outputs =
@@ -24,6 +31,7 @@
       home-manager,
       nix-vscode-extensions,
       nixcord,
+      plasma-manager,
       ...
     }@inputs:
     {
@@ -46,6 +54,7 @@
           modules = [
             ./home/tomas/home.nix
             nixcord.homeModules.nixcord
+            plasma-manager.homeModules.plasma-manager
           ];
         };
       };

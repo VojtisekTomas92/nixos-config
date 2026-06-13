@@ -8,6 +8,8 @@
     ./modules/syncthing.nix
     ./modules/obsidian.nix
     ./modules/nixcord.nix
+    ./modules/firefox.nix
+    ./modules/plasma.nix
 
   ];
 
