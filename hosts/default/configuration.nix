@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./modules/graphics.nix
+    ./modules/gaming.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
