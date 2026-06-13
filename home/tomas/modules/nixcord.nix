@@ -24,5 +24,13 @@
       };
     });
 
+    config = {
+      plugins = {
+        splitLargeMessages = {
+          enable = true;
+        };
+      };
+    };
+
   };
 }
