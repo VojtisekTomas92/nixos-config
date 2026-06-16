@@ -7,6 +7,7 @@
     ./modules/gaming.nix
     ./modules/nix-ld.nix
     ./modules/docker.nix
+    ./modules/packages.nix
   ];
 
   services.flatpak.enable = true;
