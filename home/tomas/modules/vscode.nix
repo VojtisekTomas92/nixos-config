@@ -20,6 +20,7 @@ in
         extensions = with marketplace; [
           zhuangtongfa.material-theme
           jnoortheen.nix-ide
+          alefragnani.project-manager
 
         ];
         userSettings = {
@@ -27,6 +28,8 @@ in
           "workbench.colorTheme" = "One Dark Pro";
           "editor.formatOnSave" = true;
           "explorer.compactFolders" = false;
+
+          "editor.minimap.autohide" = "mouseover";
 
           # NIX
           "nix.enableLanguageServer" = true;

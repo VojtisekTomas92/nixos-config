@@ -5,7 +5,11 @@
     ./hardware-configuration.nix
     ./modules/graphics.nix
     ./modules/gaming.nix
+    ./modules/nix-ld.nix
+    ./modules/docker.nix
   ];
+
+  services.flatpak.enable = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

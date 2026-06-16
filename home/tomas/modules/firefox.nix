@@ -41,6 +41,14 @@
           installation_mode = "force_installed";
           private_browsing = true;
         };
+        "firefox-extension@steamdb.info" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/steam-database/latest.xpi";
+        };
+        "sponsorBlocker@ajay.app" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+        };
       };
     };
 

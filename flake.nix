@@ -21,6 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
   };
 
@@ -32,6 +33,7 @@
       nix-vscode-extensions,
       nixcord,
       plasma-manager,
+      nix-flatpak,
       ...
     }@inputs:
     {
@@ -55,6 +57,7 @@
             ./home/tomas/home.nix
             nixcord.homeModules.nixcord
             plasma-manager.homeModules.plasma-manager
+            nix-flatpak.homeManagerModules.nix-flatpak
           ];
         };
       };
