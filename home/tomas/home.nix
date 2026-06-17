@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
@@ -29,6 +34,5 @@
       user.email = "vojtisektomas92@gmail.com";
     };
   };
-
   home.stateVersion = "25.11";
 }

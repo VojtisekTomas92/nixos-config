@@ -45,7 +45,7 @@ in
                   "expr" = "(builtins.getFlake \"/home/tomas/dotfiles\").nixosConfigurations.nixos.options";
                 };
                 "home-manager" = {
-                  "expr" = "(builtins.getFlake \"/home/tomas/dotfiles\").homeConfigurations.tomas.options";
+                  "expr" = "(builtins.getFlake \"/home/tomas/dotfiles\").homeConfigurations.\"tomas\".options";
                 };
               };
             };

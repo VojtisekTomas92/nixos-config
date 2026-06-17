@@ -1,0 +1,10 @@
+keyboard_layout:
+    layout: "de"
+
+backend: clipboard
+#x11_use_ptest: false
+
+
+clipboard_hints:
+  - "x-kde-passwordHint"
+

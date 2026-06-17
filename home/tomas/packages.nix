@@ -11,6 +11,8 @@
     keepassxc
     mumble
     python3
+    kdotool
+    ydotool
   ];
 
   services.flatpak = {

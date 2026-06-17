@@ -1,0 +1,10 @@
+filter_regex: "(?i)discord"
+
+matches:
+  - regex: ":(?P<lang>\\w+):"
+    backend: clipboard
+    replace: |
+      ```{{lang}}
+      $|$
+      ```
+

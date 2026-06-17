@@ -8,6 +8,7 @@
     ./modules/nix-ld.nix
     ./modules/docker.nix
     ./modules/packages.nix
+    ./modules/espanso.nix
   ];
 
   services.flatpak.enable = true;
