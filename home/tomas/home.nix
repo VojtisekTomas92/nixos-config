@@ -15,7 +15,6 @@
     ./modules/nixcord.nix
     ./modules/firefox.nix
     ./modules/plasma.nix
-
   ];
 
   home.username = "tomas";
@@ -34,5 +33,19 @@
       user.email = "vojtisektomas92@gmail.com";
     };
   };
+
+  programs.emacs = {
+    enable = true;
+  };
+
+  services.emacs = {
+    enable = true;
+    client.enable = true;
+  };
+
+  xdg.configFile."emacs" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/emacs";
+  };
+
   home.stateVersion = "25.11";
 }

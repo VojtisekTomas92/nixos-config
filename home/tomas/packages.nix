@@ -13,6 +13,7 @@
     python3
     kdotool
     ydotool
+    exercism
   ];
 
   services.flatpak = {

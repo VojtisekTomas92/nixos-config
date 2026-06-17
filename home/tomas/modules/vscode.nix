@@ -21,6 +21,7 @@ in
           zhuangtongfa.material-theme
           jnoortheen.nix-ide
           alefragnani.project-manager
+          jcs090218.ellsp
 
         ];
         userSettings = {
