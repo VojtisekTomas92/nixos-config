@@ -49,6 +49,11 @@
           installation_mode = "force_installed";
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
         };
+        # material-icons-for-github
+        "{eac6e624-97fa-4f28-9d24-c06c9b8aa713}" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/material-icons-for-github/latest.xpi";
+        };
       };
     };
 
