@@ -14,6 +14,7 @@
     kdotool
     ydotool
     exercism
+    jre
   ];
 
   services.flatpak = {
@@ -22,6 +23,7 @@
     packages = [
       "com.usebottles.bottles"
       "org.vinegarhq.Sober"
+      "io.github.MakovWait.Godots"
     ];
   };
 }
