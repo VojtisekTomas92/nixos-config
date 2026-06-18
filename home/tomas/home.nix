@@ -15,6 +15,7 @@
     ./modules/nixcord.nix
     ./modules/firefox.nix
     ./modules/plasma.nix
+    ./modules/btop.nix
   ];
 
   home.username = "tomas";
