@@ -8,5 +8,6 @@
     ./plasma.nix
     ./syncthing.nix
     ./vscode.nix
+    ./shell.nix
   ];
 }

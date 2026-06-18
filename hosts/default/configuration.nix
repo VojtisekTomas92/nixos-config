@@ -14,6 +14,8 @@
 
   services.printing.enable = true;
 
+  programs.zsh.enable = true;
+
   users.users.tomas = {
     isNormalUser = true;
     description = "tomas";
@@ -21,6 +23,7 @@
       "networkmanager"
       "wheel"
     ];
+    shell = pkgs.zsh;
   };
 
   system.stateVersion = "25.11";
