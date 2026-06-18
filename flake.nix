@@ -51,7 +51,7 @@
             system = "x86_64-linux";
             config.allowUnfree = true;
           };
-          extraSpecialArgs = { inherit nix-vscode-extensions; };
+          extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/default/home.nix
             nixcord.homeModules.nixcord

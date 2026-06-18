@@ -1,11 +1,11 @@
 {
   config,
   pkgs,
-  nix-vscode-extensions,
+  inputs,
   ...
 }:
 let
-  marketplace = nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
+  marketplace = inputs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
 in
 {
   home.packages = with pkgs; [
