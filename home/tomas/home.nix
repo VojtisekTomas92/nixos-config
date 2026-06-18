@@ -20,6 +20,11 @@
   home.username = "tomas";
   home.homeDirectory = "/home/tomas";
 
+  home.sessionVariables = {
+    FLAKE = "${config.home.homeDirectory}/dotfiles";
+    NH_HOME_FLAKE = "${config.home.homeDirectory}/dotfiles";
+  };
+
   home.packages = with pkgs; [
     git
   ];
