@@ -16,6 +16,8 @@
     exercism
     jre
     kdePackages.kate
+    wget
+    curl
   ];
 
   services.flatpak = {
