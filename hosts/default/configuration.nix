@@ -3,12 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./modules/graphics.nix
-    ./modules/gaming.nix
-    ./modules/nix-ld.nix
-    ./modules/docker.nix
-    ./modules/packages.nix
-    ./modules/espanso.nix
+    ../../modules/system
   ];
 
   services.flatpak.enable = true;

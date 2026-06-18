@@ -8,14 +8,8 @@
 {
 
   imports = [
-    ./packages.nix
-    ./modules/vscode.nix
-    ./modules/syncthing.nix
-    ./modules/obsidian.nix
-    ./modules/nixcord.nix
-    ./modules/firefox.nix
-    ./modules/plasma.nix
-    ./modules/btop.nix
+    ../../modules/home
+
   ];
 
   home.username = "tomas";
@@ -50,7 +44,7 @@
   };
 
   xdg.configFile."emacs" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/emacs";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/app-data/emacs";
   };
 
   home.stateVersion = "25.11";

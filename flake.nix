@@ -53,7 +53,7 @@
           };
           extraSpecialArgs = { inherit nix-vscode-extensions; };
           modules = [
-            ./home/tomas/home.nix
+            ./hosts/default/home.nix
             nixcord.homeModules.nixcord
             plasma-manager.homeModules.plasma-manager
             nix-flatpak.homeManagerModules.nix-flatpak

@@ -13,8 +13,8 @@
   };
 
   systemd.tmpfiles.rules = [
-    "L+     /home/tomas/.config/espanso/config  -      tomas   users   -     /home/tomas/dotfiles/espanso/config"
-    "L+     /home/tomas/.config/espanso/match   -      tomas   users   -     /home/tomas/dotfiles/espanso/match"
+    "L+     /home/tomas/.config/espanso/config  -      tomas   users   -     /home/tomas/dotfiles/app-data/espanso/config"
+    "L+     /home/tomas/.config/espanso/match   -      tomas   users   -     /home/tomas/dotfiles/app-data/espanso/match"
   ];
 
   systemd.user.services.espanso.wantedBy = [ "graphical-session.target" ];
