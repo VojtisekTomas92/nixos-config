@@ -22,6 +22,7 @@ in
           jnoortheen.nix-ide
           alefragnani.project-manager
           jcs090218.ellsp
+          christian-kohler.path-intellisense
 
         ];
         userSettings = {
