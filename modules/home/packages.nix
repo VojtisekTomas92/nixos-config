@@ -15,6 +15,7 @@
     ydotool
     exercism
     jre
+    kdePackages.kate
   ];
 
   services.flatpak = {
