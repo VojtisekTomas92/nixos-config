@@ -18,6 +18,12 @@
     kdePackages.kate
     wget
     curl
+    gimp
+    easyeffects
+    aseprite
+
+    # Fonts
+    nerd-fonts.hasklug
   ];
 
   services.flatpak = {

@@ -47,5 +47,11 @@
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/app-data/emacs";
   };
 
+  programs.nix-index-database = {
+    comma = {
+      enable = true;
+    };
+  };
+
   home.stateVersion = "25.11";
 }

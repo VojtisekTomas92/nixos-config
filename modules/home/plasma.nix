@@ -1,4 +1,29 @@
-{ ... }: {
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    nerd-fonts.hasklug
+
+  ];
+
+  fonts.fontconfig.enable = true;
+
+  programs.konsole = {
+    enable = true;
+
+    defaultProfile = "tomas";
+    profiles = {
+      "tomas" = {
+        name = "tomas";
+        command = "${pkgs.zsh}/bin/zsh";
+
+        font = {
+          name = "Hasklug Nerd Font";
+          size = 12;
+        };
+      };
+    };
+
+  };
+
   programs.plasma = {
     enable = true;
 

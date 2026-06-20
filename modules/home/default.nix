@@ -9,5 +9,6 @@
     ./syncthing.nix
     ./vscode.nix
     ./shell.nix
+    ./ghostty.nix
   ];
 }

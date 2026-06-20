@@ -11,6 +11,7 @@ in
   home.packages = with pkgs; [
     nixd
     nixfmt
+    nerd-fonts.hasklug
   ];
 
   programs.vscode = {
@@ -30,6 +31,11 @@ in
           "workbench.colorTheme" = "One Dark Pro";
           "editor.formatOnSave" = true;
           "explorer.compactFolders" = false;
+
+          # Fontstuff
+          "editor.fontFamily" = "'Hasklug Nerd Font', 'Droid Sans Mono', 'monospace', monospace";
+          "terminal.integrated.fontFamily" = "'Hasklug Nerd Font'";
+          "editor.fontLigatures" = true;
 
           "editor.minimap.autohide" = "mouseover";
 

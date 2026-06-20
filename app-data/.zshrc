@@ -6,6 +6,5 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 zinit load nix-community/nix-zsh-completions
 zinit load zsh-users/zsh-autosuggestions
-zinit load zsh-users/zsh-syntax-highlighting
 zinit load MichaelAquilina/zsh-you-should-use
 zinit load fdellwing/zsh-bat
