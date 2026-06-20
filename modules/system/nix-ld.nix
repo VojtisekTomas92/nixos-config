@@ -5,8 +5,26 @@
       stdenv.cc.cc
       zlib
       glib
+      libxcb
+      libxcb-util
+      libxcb-wm
+      libxcb-image
+      libxcb-keysyms
+      libxcb-render-util
+      libxcb-cursor
+      libxcb-errors
+      libxkbcommon
+      pcre2
 
-      # Core X11 & Input
+      dbus
+      wayland
+
+      numactl
+      libpulseaudio
+      libva
+      libvdpau
+      libxfixes
+
       libX11
       libXext
       libXrender
@@ -14,7 +32,6 @@
       libXi
       libXxf86vm
 
-      # Hardware Graphics & OpenGL (Crucial for JavaFX)
       libGL
       libGLU
       libglvnd
