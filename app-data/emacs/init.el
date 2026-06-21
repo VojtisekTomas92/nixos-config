@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
@@ -12,6 +13,7 @@
 
 (electric-pair-mode 1)
 
+
 (use-package corfu
   :ensure t
   :init
@@ -19,11 +21,29 @@
         corfu-auto-delay 0.0
         corfu-auto-prefix 1
         corfu-quit-no-match 'separator)
-  (global-corfu-mode))
+  (global-corfu-mode)
+  :config
+  (corfu-popupinfo-mode 1)
+  (setq corfu-popupinfo-delay '(0.2 . 0.1))
+  :bind (:map corfu-map
+              ("M-p" . corfu-popupinfo-scroll-down)
+              ("M-n" . corfu-popupinfo-scroll-up)
+              ("M-d" . corfu-popupinfo-toggle)))
 
 (setq completion-styles '(basic))
-(add-hook 'emacs-lisp-mode-hook #'corfu-mode)
 
+
+
+
+(use-package orderless
+  :ensure t
+  :init
+  (setq orderless-matching-styles '(orderless-regexp 
+                                  orderless-initialism 
+                                  orderless-prefixes))
+  (setq completion-styles '(orderless basic)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
 
 (use-package cape
   :ensure t

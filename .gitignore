@@ -2,3 +2,4 @@ app-data/emacs/elpa/*
 app-data/emacs/eln-cache/*
 app-data/emacs/init.el~
 app-data/emacs/#*.*#
+app-data/emacs/auto-save-list/*

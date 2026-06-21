@@ -1,12 +1,19 @@
 {
   description = "Separate NixOS and Home Manager Flake Configuration";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://nix-community.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+  };
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-vscode-extensions = {
@@ -25,6 +32,11 @@
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -37,6 +49,7 @@
       plasma-manager,
       nix-flatpak,
       nix-index-database,
+      emacs-overlay,
       ...
     }@inputs:
     {
@@ -54,6 +67,7 @@
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
+            overlays = [ emacs-overlay.overlays.default ];
           };
           extraSpecialArgs = { inherit inputs; };
           modules = [
