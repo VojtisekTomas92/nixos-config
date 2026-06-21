@@ -10,6 +10,5 @@
     ./vscode.nix
     ./shell.nix
     ./ghostty.nix
-    ./emacs.nix
   ];
 }
