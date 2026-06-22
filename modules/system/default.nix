@@ -1,6 +1,5 @@
 { ... }: {
   imports = [
-    ./docker.nix
     ./espanso.nix
     ./gaming.nix
     ./graphics.nix
