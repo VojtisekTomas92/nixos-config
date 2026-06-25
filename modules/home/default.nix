@@ -10,5 +10,6 @@
     ./vscode.nix
     ./shell.nix
     ./ghostty.nix
+    ./containers/podman.nix
   ];
 }
