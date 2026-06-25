@@ -1,4 +1,6 @@
 { config, ... }: {
+
+  sops.secrets.yamtrack-secret = { };
   # TODO Check out silverbullet
   services.podman = {
     enable = true;
@@ -36,10 +38,13 @@
         ports = [
           "127.0.0.1:8000:8000"
         ];
+
+        environmentFile = [
+          config.sops.secrets.yamtrack-secret.path
+        ];
+
         environment = {
           TZ = "Europe/Berlin";
-          # TODO Replace this
-          SECRET = "hfnfhjghstjmm56w7i64uqitashjndfasgh654";
           REDIS_URL = "redis://redis:6379";
         };
         volumes = [
