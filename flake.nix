@@ -72,6 +72,7 @@
             inputs.plasma-manager.homeModules.plasma-manager
             inputs.nix-flatpak.homeManagerModules.nix-flatpak
             inputs.nix-index-database.homeModules.default
+            inputs.sops-nix.homeManagerModules.sops
           ];
         };
       };

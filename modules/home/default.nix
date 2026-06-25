@@ -11,5 +11,6 @@
     ./shell.nix
     ./ghostty.nix
     ./containers/podman.nix
+    ./sops.nix
   ];
 }

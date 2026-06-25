@@ -1,0 +1,8 @@
+keys:
+  - &my_key age1t40xxhqlhf2v9r7g5zg2cx30h2a0x9u9ar8uk59fqc5un99zh4lq2npwx4
+
+creation_rules:
+  - path_regex: .*\.yaml$
+    key_groups:
+      - age:
+        - *my_key

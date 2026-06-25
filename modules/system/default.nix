@@ -10,5 +10,6 @@
     ./desktop.nix
     ./sound.nix
     ./nix.nix
+    ./sops.nix
   ];
 }
