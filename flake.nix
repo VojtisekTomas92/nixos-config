@@ -2,17 +2,17 @@
   description = "Separate NixOS and Home Manager Flake Configuration";
 
   nixConfig = {
-    extra-substituters = [
-      "https://nix-community.cachix.org"
-    ];
+    extra-substituters = [ "https://nix-community.cachix.org" ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];
   };
+
   inputs = {
 
     # Core ecosystem
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager.url = "github:nix-community/home-manager";
 
     # Desktop
@@ -22,7 +22,7 @@
 
     # Applications & Tools
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    
+
     nixcord.url = "github:FlameFlag/nixcord";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
@@ -30,7 +30,9 @@
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
-  };
+
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
   };
 
@@ -39,38 +41,37 @@
       self,
       nixpkgs,
       home-manager,
-      nix-vscode-extensions,
-      nixcord,
-      plasma-manager,
-      nix-flatpak,
-      nix-index-database,
-      emacs-overlay,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          inherit system;
+          specialArgs = { inherit inputs; };
           modules = [
             ./hosts/default/configuration.nix
+            inputs.sops-nix.nixosModules.sops
           ];
         };
       };
 
       homeConfigurations = {
         "tomas" = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
-            overlays = [ emacs-overlay.overlays.default ];
-          };
+          inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/default/home.nix
-            nixcord.homeModules.nixcord
-            plasma-manager.homeModules.plasma-manager
-            nix-flatpak.homeManagerModules.nix-flatpak
-            nix-index-database.homeModules.default
+            inputs.nixcord.homeModules.nixcord
+            inputs.plasma-manager.homeModules.plasma-manager
+            inputs.nix-flatpak.homeManagerModules.nix-flatpak
+            inputs.nix-index-database.homeModules.default
           ];
         };
       };
