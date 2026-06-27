@@ -12,5 +12,6 @@
     ./containers/podman.nix
     ./sops.nix
     ./terminal/zsh.nix
+    ./terminal/kitty.nix
   ];
 }
