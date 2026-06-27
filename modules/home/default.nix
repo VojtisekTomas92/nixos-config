@@ -15,5 +15,6 @@
     ./terminal/kitty.nix
     ./terminal/eza.nix
     ./terminal/bat.nix
+    ./terminal/fzf.nix
   ];
 }

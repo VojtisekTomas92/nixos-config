@@ -4,6 +4,7 @@
   ...
 }:
 {
+
   programs.zsh = {
     enable = true;
 
@@ -23,16 +24,6 @@
       ignoreSpace = true;
       save = 30000;
       share = true;
-    };
-
-    antidote = {
-      enable = false;
-
-      plugins = [
-        "nix-community/nix-zsh-completions"
-        "MichaelAquilina/zsh-you-should-use"
-        "fdellwing/zsh-bat"
-      ];
     };
 
     initContent = ''
