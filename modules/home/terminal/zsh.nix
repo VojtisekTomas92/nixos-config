@@ -7,8 +7,6 @@
   programs.zsh = {
     enable = true;
 
-    zprof.enable = true;
-
     enableCompletion = true;
     enableVteIntegration = pkgs.stdenv.isLinux;
     autocd = true;
