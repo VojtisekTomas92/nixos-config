@@ -139,6 +139,8 @@
     };
 
     initContent = ''
+      bindkey "^[[1;5D" backward-word
+      bindkey "^[[1;5C" forward-word
       source "${config.home.homeDirectory}/dotfiles/app-data/.zshrc"
     '';
   };
