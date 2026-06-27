@@ -53,4 +53,8 @@
     '';
   };
 
+  home.shellAliases = {
+    cat = "bat";
+  };
+
 }

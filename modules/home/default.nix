@@ -14,5 +14,6 @@
     ./terminal/zsh.nix
     ./terminal/kitty.nix
     ./terminal/eza.nix
+    ./terminal/bat.nix
   ];
 }
