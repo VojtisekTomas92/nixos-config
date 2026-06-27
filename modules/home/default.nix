@@ -8,9 +8,9 @@
     ./plasma.nix
     ./syncthing.nix
     ./vscode.nix
-    ./shell.nix
     ./ghostty.nix
     ./containers/podman.nix
     ./sops.nix
+    ./terminal/zsh.nix
   ];
 }
