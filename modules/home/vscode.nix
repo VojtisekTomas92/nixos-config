@@ -24,6 +24,7 @@ in
           alefragnani.project-manager
           jcs090218.ellsp
           christian-kohler.path-intellisense
+          emmanuelbeziat.vscode-great-icons
 
         ];
         userSettings = {
@@ -31,6 +32,8 @@ in
           "workbench.colorTheme" = "One Dark Pro";
           "editor.formatOnSave" = true;
           "explorer.compactFolders" = false;
+
+          "workbench.iconTheme" = "vscode-great-icons";
 
           # Fontstuff
           "editor.fontFamily" = "'Hasklug Nerd Font', 'Droid Sans Mono', 'monospace', monospace";
