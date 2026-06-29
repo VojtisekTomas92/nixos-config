@@ -11,5 +11,6 @@
     ./sound.nix
     ./nix.nix
     ./sops.nix
+    ./printing.nix
   ];
 }
